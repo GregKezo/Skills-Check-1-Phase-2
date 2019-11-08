@@ -4,6 +4,14 @@
 
 //Code here
 
+const stringItOut = arr => {
+  let sortedArr = [] 
+  typeof arr[0] === "number"
+    ? sortedArr = arr.sort((a, b) => b - a).toString()
+    : sortedArr = arr.sort().reverse().toString()
+ 
+  return sortedArr
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -18,3 +26,4 @@ function complex(num1, num2) {
 }
 
 //Code here
+let mathResult = math(complex, 2, 3)
