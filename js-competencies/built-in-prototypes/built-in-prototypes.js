@@ -11,6 +11,9 @@
   
   //Code here
 
+const dragonMapper = (arr) => {
+  return arr.map(ele => `${ele}...here be dragons` )
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -21,6 +24,9 @@
 //cookieLoversOnly should return the filtered array.
   
   //Code here
+  
+const cookieLoversOnly = arr => arr.filter( elem => elem.favoriteCookie !== undefined )
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -36,7 +42,12 @@
 
   //Code here
 
-
+const changeValue = (arr, cb) => {
+  arr.forEach(callback = ele => {
+    cb(ele)
+  })
+  return arr
+}
 
 //////////////////PROBLEM 4////////////////////
 
@@ -47,7 +58,8 @@
 //Return the product.
   
   //Code here
-
+const findProduct = arr => arr.reduce((acc, curr) => acc * curr)
+  
 
 //////////////////PROBLEM 5////////////////////
 
@@ -64,7 +76,11 @@
 // cipherize will return: "d"
 
   //Code here
-
+const cipherize = (arr, str) => {
+  let position = arr.indexOf(str)
+  let strArr = arr[position].charAt(position)
+  return strArr
+}
 
 
 //////////////////PROBLEM 6////////////////////
@@ -75,3 +91,7 @@
 //apart, reversing it, and putting it back together again.
 
   //Code here
+
+  const reverseMe = str => str.split('')
+    .reverse()
+    .join('')
