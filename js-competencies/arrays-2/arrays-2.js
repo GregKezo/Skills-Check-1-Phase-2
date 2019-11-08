@@ -11,6 +11,12 @@
 
 //Code here
 
+const addMoreDucks = arr => {
+  arr.length > 4 
+    ? arr.splice(2,1, '42 ducks')
+    : null;
+    return arr
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -20,6 +26,12 @@
 
 //Code here
 
+const cutItOut = arr => {
+  arr.length > 4
+    ? arr.splice(2,1)
+    : null
+    return arr
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -29,3 +41,8 @@
 
 //Code here
 
+const changeName = arr => {
+  let index = arr.findIndex( ele => ele === 'Tolkn')
+  arr.splice(index, 1, 'Tolkien')
+  return arr
+}
