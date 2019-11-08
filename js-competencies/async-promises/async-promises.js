@@ -8,6 +8,10 @@
 
 //Code here
 
+var whereAreMyKeys = new Promise((resolve, reject) => {
+    setTimeout(resolve("On the table!"), 1000)
+}) 
+
 
 ///////////////////Problem 2//////////////////
 
@@ -20,10 +24,12 @@
 //reason "Can't find Atlantis!"
 
 function lostCityFinder(lostCity){
-
     //CODE HERE
-
-
+    let findAtlantis = new Promise((resolve, reject) => {
+        lostCity.location === 'under the sea'
+          ? resolve(lostCity.name)
+          : reject("Can't find Atlantis!")
+    })
     //DO NOT TOUCH THIS LINE
     return findAtlantis
 }
@@ -36,7 +42,7 @@ function lostCityFinder(lostCity){
 var night = ""
 
 //CODE HERE
-
+goodNight.then( resolveValueBecauseItsTrue => night = resolveValueBecauseItsTrue)
 
 
 ///////////////////Problem 4//////////////////
@@ -50,5 +56,6 @@ var err = ""
 
 //CODE HERE
 
-
+goodDay.then(resolved => day = resolved)
+    .catch(reject => err = reject)
 
