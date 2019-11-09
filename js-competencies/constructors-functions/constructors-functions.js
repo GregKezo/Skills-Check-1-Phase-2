@@ -6,17 +6,17 @@
 //BROKEN ON PURPOSE 
 
 function EgyptianGoddesses(name, oversees, strength, weakness) {
-  name = name;
-  oversees = oversees;
-  strength = strength;
-  weakness = weakness;
+  this.name = name;
+  this.oversees = oversees;
+  this.strength = strength;
+  this.weakness = weakness;
 
-  return function() {
-    name,
-    oversees,
-    strength,
-    weakness
-  }
+  // return function() {
+  //   name,
+  //   oversees,
+  //   strength,
+  //   weakness
+  // }
   
 }
 
@@ -28,6 +28,9 @@ var maatCharacteristics = ['Maat', 'Truth and Justice', 'Balancing and Just', 'E
 //Code here
 
 
+const maat = new EgyptianGoddesses(...maatCharacteristics)
+
+
 
 //////////////////PROBLEM 2////////////////////
 
@@ -35,9 +38,9 @@ var maatCharacteristics = ['Maat', 'Truth and Justice', 'Balancing and Just', 'E
 
 //BROKEN ON PURPOSE 
 
-function TestScores() {
-  this.name;
-  this.percent;
+function TestScores(name, percent) {
+  this.name = name;
+  this.percent = percent;
 
   return this.name + this.percent
 }
@@ -47,6 +50,7 @@ function TestScores() {
 
 //Code here
 
+const suzy = new TestScores('Suzy', 98)
 
 
 
@@ -59,6 +63,13 @@ function TestScores() {
 
 //Code here
 
+function Caveman(name, age, weapon) {
+  this.name = name;
+  this.age = age;
+  this.weapon = weapon;
+  this.health = 100;
+  this.energy = 100
+}
 
 // Now create a new Caveman with the constructor function you made called 'larry'. 
 // Larry is 25 and has a 'rock' for a weapon.
@@ -67,5 +78,5 @@ function TestScores() {
 //Code here
 
 
-
+const larry = new Caveman('Larry', 25, 'rock')
 
